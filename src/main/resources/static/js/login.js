@@ -13,6 +13,7 @@ console.log(user);
         .then(res => {
             console.log("Login success:", res.data);
             alert("Login Successful!");
+			window.location.href = "home";  
         })
         .catch(err => {
             console.error("Login failed:", err);

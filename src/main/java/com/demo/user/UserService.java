@@ -4,16 +4,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestBody;
 
 @Service
 public class UserService {
 
 	private static final List<User>list=new ArrayList<>();	
-	public void register(User user)	{
+	public void register( User user)	{
 		
 		user.setStatus("online");
-		list.add(user);;
-	}
+		
+		list.add(user);
+		System.out.println(list);
+		}
 	
 	
 	public User login(User user)

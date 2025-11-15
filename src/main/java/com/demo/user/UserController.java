@@ -29,7 +29,7 @@ public class UserController {
 	}
 	
 	@PostMapping("register")
-	public void register(User user)
+	public void register(@RequestBody User user)
 	{
 		 service.register(user);
 	}
