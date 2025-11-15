@@ -8,7 +8,7 @@ function handleLogin(event) {
         username: name,
         password: password
     };
-
+console.log(user);
     axios.post("http://localhost:9001/login", user)
         .then(res => {
             console.log("Login success:", res.data);
