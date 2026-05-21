@@ -10,9 +10,22 @@ import org.springframework.web.bind.annotation.RequestBody;
 public class UserService {
 
 	private static final List<User>list=new ArrayList<>();	
+	
+	
+	public List<User>getAll()
+	{
+		List<User>con=new ArrayList<>();
+		for(User t:list)
+		{
+			if(t.getStatus()=="online")
+				con.add(t);
+		}
+		return con;
+	}
+	
 	public void register( User user)	{
 		
-		user.setStatus("online");
+	//user.setStatus("online");
 		
 		list.add(user);
 		System.out.println(list);
@@ -44,4 +57,5 @@ public class UserService {
 			}
 		}
 	}
+	
 }

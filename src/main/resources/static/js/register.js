@@ -15,7 +15,8 @@ function handleRegister(event) {
   const user = {
     username: name,
     email: email,
-    password: password
+    password: password,
+	status:"online"
   };
 
   console.log("Register payload:", user);
